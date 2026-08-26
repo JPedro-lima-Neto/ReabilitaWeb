@@ -1,0 +1,188 @@
+.historico-page {
+    width: 100%;
+    max-width: 1220px;
+    margin: 0 auto;
+}
+
+.historico-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 48px 40px 40px;
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+}
+
+.historico-header {
+    margin-bottom: 48px;
+}
+
+.historico-header h1 {
+    margin: 0 0 14px;
+    color: #17233b;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.historico-header p {
+    margin: 0;
+    color: #334155;
+    font-size: 15px;
+}
+
+.historico-busca {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    padding: 15px;
+    margin-bottom: 30px;
+    background: #f8fafc;
+    border: 1px solid #dce5ef;
+    border-radius: 16px;
+}
+
+.historico-busca input {
+    width: 100%;
+    height: 44px;
+    padding: 0 16px;
+    background: #ffffff;
+    border: 1px solid #ccd7e5;
+    border-radius: 10px;
+    color: #334155;
+    outline: none;
+}
+
+.historico-busca input:focus {
+    border-color: #2f69e8;
+    box-shadow: 0 0 0 3px rgba(47, 105, 232, 0.08);
+}
+
+.historico-busca button {
+    min-width: 95px;
+    height: 44px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 10px;
+    background: #2f69e8;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.historico-busca button:hover {
+    background: #2458ca;
+}
+
+.historico-tabela-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.historico-tabela {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.historico-tabela th {
+    padding: 17px 15px;
+    background: #f8fafc;
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.historico-tabela th:nth-child(1) {
+    width: 28%;
+}
+
+.historico-tabela th:nth-child(2) {
+    width: 20%;
+}
+
+.historico-tabela th:nth-child(3) {
+    width: 34%;
+}
+
+.historico-tabela th:nth-child(4) {
+    width: 18%;
+}
+
+.historico-tabela td {
+    padding: 20px 15px;
+    border-bottom: 1px solid #e9eef5;
+    color: #64748b;
+    font-size: 13px;
+    vertical-align: middle;
+}
+
+.historico-tabela td strong {
+    display: block;
+    color: #111827;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.historico-tabela td small {
+    display: block;
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+.texto-exercicios {
+    overflow: hidden;
+    color: #64748b;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.botao-pdf {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-height: 38px;
+    padding: 0 14px;
+    background: #eff6ff;
+    color: #2563eb;
+    border: 1px solid #d7e5f8;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.botao-pdf:hover {
+    background: #dbeafe;
+}
+
+.historico-carregando,
+.historico-vazio {
+    padding: 35px !important;
+    color: #64748b;
+    text-align: center !important;
+}
+
+@media (max-width: 800px) {
+    .historico-card {
+        padding: 30px 20px;
+    }
+
+    .historico-header {
+        margin-bottom: 30px;
+    }
+
+    .historico-header h1 {
+        font-size: 24px;
+    }
+
+    .historico-busca {
+        grid-template-columns: 1fr;
+    }
+
+    .historico-busca button {
+        width: 100%;
+    }
+
+    .historico-tabela {
+        min-width: 850px;
+    }
+}
