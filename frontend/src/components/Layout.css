@@ -1,0 +1,118 @@
+.app-layout {
+    min-height: 100vh;
+    display: flex;
+    background: #f4f6f9;
+}
+
+.sidebar {
+    width: 262px;
+    min-height: 100vh;
+    background: #ffffff;
+    border-right: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-top: 38px;
+    gap: 14px;
+}
+
+.sidebar-link {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0 20px;
+    margin-right: 10px;
+    color: #42526e;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 0 32px 32px 0;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.sidebar-link:hover {
+    background: #f1f5f9;
+    color: #1a438e;
+}
+
+.sidebar-link.ativo {
+    background: #2f69e8;
+    color: #ffffff;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(47, 105, 232, 0.22);
+}
+
+.sidebar-icon {
+    width: 24px;
+    display: flex;
+    justify-content: center;
+    font-size: 17px;
+}
+
+.sidebar-sair {
+    margin-top: auto;
+    margin-bottom: 28px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 20px;
+    border: none;
+    background: transparent;
+    color: #ef4444;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.sidebar-sair:hover {
+    background: #fff1f1;
+    border-radius: 0 24px 24px 0;
+}
+
+.conteudo-principal {
+    flex: 1;
+    margin-left: 262px;
+    min-height: 100vh;
+    padding: 50px 46px;
+}
+
+@media (max-width: 900px) {
+    .sidebar {
+        width: 82px;
+    }
+
+    .sidebar-link span:last-child,
+    .sidebar-sair span:last-child {
+        display: none;
+    }
+
+    .sidebar-link {
+        justify-content: center;
+        padding: 0;
+        margin-right: 8px;
+    }
+
+    .sidebar-sair {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 0;
+    }
+
+    .conteudo-principal {
+        margin-left: 82px;
+        padding: 30px 20px;
+    }
+}

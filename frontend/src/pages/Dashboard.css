@@ -1,0 +1,369 @@
+.dashboard {
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+}
+
+.dashboard-boas-vindas {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 48px;
+}
+
+.avatar-profissional {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background:
+        linear-gradient(
+            135deg,
+            #2f69e8,
+            #673ab7
+        );
+    border: 2px solid #2f69e8;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.dashboard-boas-vindas h1 {
+    margin: 0 0 4px;
+    color: #171f2d;
+    font-size: 29px;
+    font-weight: 700;
+}
+
+.dashboard-boas-vindas p {
+    margin: 0;
+    color: #64748b;
+    font-size: 15px;
+}
+
+.dashboard-estatisticas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 40px;
+}
+
+.estatistica-card {
+    position: relative;
+    min-height: 122px;
+    padding: 20px;
+    overflow: hidden;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05);
+}
+
+.estatistica-card::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 4px;
+}
+
+.estatistica-azul::after {
+    background: #2f69e8;
+}
+
+.estatistica-roxo::after {
+    background: #8b5cf6;
+}
+
+.estatistica-laranja::after {
+    background: #f59e0b;
+}
+
+.estatistica-titulo {
+    display: block;
+    margin-bottom: 10px;
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.estatistica-card strong {
+    display: block;
+    margin-bottom: 10px;
+    color: #111827;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.estatistica-detalhe {
+    color: #64748b;
+    font-size: 12px;
+}
+
+.estatistica-detalhe.verde {
+    color: #16a34a;
+}
+
+.dashboard-acao {
+    width: 78%;
+    min-height: 245px;
+    margin: 0 auto 40px;
+    padding: 44px 38px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+}
+
+.dashboard-acao-conteudo {
+    flex: 1;
+}
+
+.dashboard-acao h2 {
+    margin: 0 0 18px;
+    color: #263650;
+    font-size: 22px;
+}
+
+.dashboard-acao p {
+    max-width: 600px;
+    margin: 0 0 24px;
+    color: #334155;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.dashboard-botoes {
+    display: flex;
+    gap: 14px;
+}
+
+.dashboard-botoes button {
+    height: 48px;
+    padding: 0 22px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.botao-nova-prescricao {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #2f69e8;
+    color: #ffffff;
+}
+
+.botao-nova-prescricao:hover {
+    background: #2458ca;
+}
+
+.botao-historico {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f1f5f9;
+    color: #1e293b;
+    border: 1px solid #dbe2ea !important;
+}
+
+.botao-historico:hover {
+    background: #e7edf4;
+}
+
+.dashboard-ilustracao {
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hospital {
+    position: relative;
+    width: 96px;
+    height: 118px;
+}
+
+.hospital-corpo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 86px;
+    height: 98px;
+    padding: 28px 18px 0;
+    background:
+        linear-gradient(
+            180deg,
+            #aaa4bb,
+            #c9bfd7
+        );
+    border-radius: 10px 10px 0 0;
+}
+
+.hospital-corpo span {
+    display: block;
+    width: 100%;
+    height: 6px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    background: #f0ddff;
+}
+
+.hospital-cruz {
+    position: absolute;
+    z-index: 2;
+    left: 8px;
+    top: 0;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #ec4899;
+    font-size: 28px;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.12);
+}
+
+.dashboard-recentes {
+    width: 78%;
+    margin: 0 auto;
+    padding: 28px 32px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
+}
+
+.recentes-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.recentes-header h2 {
+    margin: 0 0 4px;
+    color: #263650;
+    font-size: 19px;
+}
+
+.recentes-header p {
+    margin: 0;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.recentes-header button {
+    border: none;
+    background: transparent;
+    color: #2f69e8;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.recentes-lista {
+    display: flex;
+    flex-direction: column;
+}
+
+.prescricao-recente {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid #eef2f7;
+}
+
+.prescricao-recente:last-child {
+    border-bottom: none;
+}
+
+.prescricao-recente-icone {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eef4ff;
+    border-radius: 10px;
+}
+
+.prescricao-recente-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.prescricao-recente-info strong {
+    color: #1e293b;
+    font-size: 14px;
+}
+
+.prescricao-recente-info span {
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+.prescricao-recente-total {
+    color: #64748b;
+    font-size: 12px;
+}
+
+.dashboard-carregando {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    color: #64748b;
+}
+
+@media (max-width: 1100px) {
+    .dashboard-estatisticas {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-acao,
+    .dashboard-recentes {
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .dashboard-boas-vindas h1 {
+        font-size: 23px;
+    }
+
+    .dashboard-acao {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 28px 24px;
+    }
+
+    .dashboard-ilustracao {
+        display: none;
+    }
+
+    .dashboard-botoes {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .dashboard-botoes button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .prescricao-recente-total {
+        display: none;
+    }
+}

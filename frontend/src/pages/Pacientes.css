@@ -1,0 +1,508 @@
+.pacientes-page {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 28px;
+    align-items: start;
+}
+
+.filtro-pacientes {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 36px 22px 24px;
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+}
+
+.filtro-header {
+    margin-bottom: 20px;
+}
+
+.filtro-header h2 {
+    margin: 0 0 16px;
+    color: #26344d;
+    font-size: 19px;
+}
+
+.filtro-header p {
+    margin: 0;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.campo-busca-paciente {
+    display: grid;
+    grid-template-columns: 1fr 48px;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.campo-busca-paciente input {
+    width: 100%;
+    height: 42px;
+    padding: 0 12px;
+    border: 1px solid #cdd8e6;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #334155;
+    outline: none;
+}
+
+.campo-busca-paciente input:focus {
+    border-color: #2f69e8;
+    box-shadow: 0 0 0 3px rgba(47, 105, 232, 0.08);
+}
+
+.campo-busca-paciente button {
+    width: 48px;
+    height: 42px;
+    border: none;
+    border-radius: 9px;
+    background: #2f69e8;
+    color: #ffffff;
+}
+
+.lista-pacientes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.paciente-item {
+    width: 100%;
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background: #ffffff;
+    border: 1px solid #d8e1ec;
+    border-radius: 10px;
+    color: #1e293b;
+    text-align: left;
+    cursor: pointer;
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.paciente-item:hover {
+    border-color: #9db8e6;
+    background: #f8fbff;
+}
+
+.paciente-item.ativo {
+    border-color: #2f69e8;
+    background: #f3f7ff;
+    box-shadow: 0 0 0 2px rgba(47, 105, 232, 0.07);
+}
+
+.paciente-item-icon {
+    width: 24px;
+    flex-shrink: 0;
+}
+
+.paciente-item-dados {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.paciente-item-dados strong {
+    color: #16233b;
+    font-size: 15px;
+}
+
+.paciente-item-dados small {
+    color: #64748b;
+    font-size: 12px;
+}
+
+.nenhum-paciente {
+    padding: 25px 10px;
+    color: #94a3b8;
+    text-align: center;
+    font-size: 13px;
+}
+
+.historico-clinico {
+    min-height: 600px;
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 38px 40px 40px;
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+}
+
+.historico-clinico-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.historico-clinico-header h1 {
+    margin: 0 0 8px;
+    color: #17233b;
+    font-size: 24px;
+}
+
+.historico-clinico-header h3 {
+    margin: 0 0 14px;
+    color: #111827;
+    font-size: 17px;
+}
+
+.historico-clinico-header p {
+    margin: 0;
+    color: #64748b;
+    font-size: 15px;
+}
+
+.botao-imprimir-historico {
+    min-width: 230px;
+    height: 42px;
+    padding: 0 18px;
+    border: none;
+    border-radius: 9px;
+    background: #2f69e8;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.botao-imprimir-historico:hover {
+    background: #2458ca;
+}
+
+.linha-separadora {
+    height: 1px;
+    margin: 28px 0 25px;
+    background: #e5eaf1;
+}
+
+.resumo-paciente {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 34px;
+}
+
+.resumo-card {
+    min-height: 78px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+    background: #f8fafc;
+    border: 1px solid #dce5ef;
+    border-radius: 10px;
+}
+
+.resumo-card span {
+    margin-bottom: 4px;
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.resumo-card strong {
+    color: #101827;
+    font-size: 24px;
+}
+
+.resumo-card .data-resumo {
+    font-size: 15px;
+}
+
+.timeline-section h2 {
+    margin: 0 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dfe6ef;
+    color: #26344d;
+    font-size: 19px;
+}
+
+.timeline-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.atendimento-card {
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #d8e2ee;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
+}
+
+.atendimento-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 16px 18px 10px;
+    border-bottom: 1px dashed #dce4ee;
+}
+
+.atendimento-header strong {
+    color: #17233b;
+    font-size: 15px;
+}
+
+.atendimento-header span {
+    padding: 8px 15px;
+    background: #eff6ff;
+    border: 1px solid #d4e4fa;
+    border-radius: 8px;
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.atendimento-conteudo {
+    padding: 12px 18px 18px;
+}
+
+.atendimento-conteudo p {
+    margin: 0 0 10px;
+    color: #111827;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.queixa strong {
+    color: #ef2b2d;
+}
+
+.exercicios-prescritos {
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+}
+
+.exercicios-prescritos p strong {
+    color: #2563eb;
+}
+
+.orientacoes-atendimento {
+    margin-top: 8px;
+    padding: 12px 15px;
+    background: #f8fafc;
+    border-left: 4px solid #cbd5e1;
+    border-radius: 8px;
+    color: #475569;
+    font-size: 13px;
+}
+
+.orientacoes-atendimento strong {
+    color: #475569;
+}
+
+.sem-atendimentos,
+.selecione-paciente {
+    padding: 60px 20px;
+    color: #94a3b8;
+    text-align: center;
+}
+
+.pacientes-carregando {
+    display: flex;
+    min-height: 50vh;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+}
+
+@media (max-width: 1200px) {
+    .pacientes-page {
+        grid-template-columns: 330px 1fr;
+    }
+
+    .historico-clinico {
+        padding: 30px 25px;
+    }
+}
+
+@media (max-width: 950px) {
+    .pacientes-page {
+        grid-template-columns: 1fr;
+    }
+
+    .historico-clinico-header {
+        flex-direction: column;
+    }
+
+    .botao-imprimir-historico {
+        width: 100%;
+    }
+}
+
+@media (max-width: 650px) {
+    .resumo-paciente {
+        grid-template-columns: 1fr;
+    }
+
+    .atendimento-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media print {
+    .sidebar,
+    .filtro-pacientes,
+    .botao-imprimir-historico {
+        display: none !important;
+    }
+
+    .conteudo-principal {
+        margin-left: 0 !important;
+        padding: 0 !important;
+    }
+
+    .pacientes-page {
+        display: block;
+    }
+
+    .historico-clinico {
+        box-shadow: none;
+        padding: 20px;
+    }
+
+    .atendimento-card {
+        break-inside: avoid;
+    }
+}
+.botao-novo-paciente {
+    width: 100%;
+    height: 44px;
+    margin-bottom: 18px;
+    border: none;
+    border-radius: 9px;
+    background: #2f69e8;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.botao-novo-paciente:hover {
+    background: #2458ca;
+}
+
+.cadastro-paciente {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+    padding: 16px;
+    background: #f8fafc;
+    border: 1px solid #dbe4ef;
+    border-radius: 12px;
+}
+
+.cadastro-paciente > div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.cadastro-paciente label {
+    color: #334155;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.cadastro-paciente input {
+    width: 100%;
+    height: 40px;
+    padding: 0 11px;
+    border: 1px solid #ccd7e5;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #334155;
+    outline: none;
+}
+
+.cadastro-paciente input:focus {
+    border-color: #2f69e8;
+    box-shadow: 0 0 0 3px rgba(47, 105, 232, 0.08);
+}
+
+.acoes-cadastro-paciente {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px !important;
+}
+
+.acoes-cadastro-paciente button {
+    height: 38px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.botao-cancelar-cadastro {
+    border: 1px solid #d5dee9;
+    background: #ffffff;
+    color: #475569;
+}
+
+.botao-salvar-paciente {
+    border: none;
+    background: #2f69e8;
+    color: #ffffff;
+}
+
+.botao-salvar-paciente:hover {
+    background: #2458ca;
+}
+
+.erro-cadastro-paciente {
+    margin: 0;
+    padding: 9px 10px;
+    border-radius: 7px;
+    background: #fef2f2;
+    color: #b91c1c;
+    font-size: 12px;
+}
+.acoes-atendimento {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.botao-pdf-atendimento {
+    height: 34px;
+    padding: 0 12px;
+    border: 1px solid #d7e5f8;
+    border-radius: 8px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.botao-pdf-atendimento:hover {
+    background: #dbeafe;
+}
+
+@media (max-width: 700px) {
+    .acoes-atendimento {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media print {
+    .botao-pdf-atendimento,
+    .acoes-atendimento > span {
+        display: none !important;
+    }
+}
