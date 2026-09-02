@@ -36,15 +36,6 @@ app.use(
     express.json()
 );
 
-app.get('/', (req, res) => {
-    res.json({
-        projeto: 'ReabilitaWeb',
-        status: 'online',
-        api: '/api',
-        graphql: '/graphql'
-    });
-});
-
 app.get(
     '/api/health',
     (req, res) => {
