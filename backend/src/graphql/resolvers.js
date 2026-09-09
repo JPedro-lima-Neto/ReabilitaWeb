@@ -16,16 +16,18 @@ export const resolvers = {
         pacientes: (_, args, context) => {
             return Paciente.find({
                 usuario: context.usuario.id
-            }).sort({
-                nome: 1
-            });
+            })
+                .sort({
+                    nome: 1
+                })
+                .exec();
         },
 
         paciente: (_, args, context) => {
             return Paciente.findOne({
                 _id: args.id,
                 usuario: context.usuario.id
-            });
+            }).exec();
         },
 
         exercicios: (_, args) => {
@@ -35,10 +37,12 @@ export const resolvers = {
                   }
                 : {};
 
-            return Exercicio.find(filtro).sort({
-                categoria: 1,
-                nome: 1
-            });
+            return Exercicio.find(filtro)
+                .sort({
+                    categoria: 1,
+                    nome: 1
+                })
+                .exec();
         },
 
         prescricoes: (_, args, context) => {
@@ -48,25 +52,28 @@ export const resolvers = {
                 .populate(populate)
                 .sort({
                     createdAt: -1
-                });
+                })
+                .exec();
         },
 
         prescricao: (_, args, context) => {
             return Prescricao.findOne({
                 _id: args.id,
                 usuario: context.usuario.id
-            }).populate(populate);
+            })
+                .populate(populate)
+                .exec();
         },
 
         dashboard: async (_, args, context) => {
             const [pacientes, prescricoes] = await Promise.all([
                 Paciente.countDocuments({
                     usuario: context.usuario.id
-                }),
+                }).exec(),
 
                 Prescricao.countDocuments({
                     usuario: context.usuario.id
-                })
+                }).exec()
             ]);
 
             return {
