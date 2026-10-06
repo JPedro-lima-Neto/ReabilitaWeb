@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import api from '../services/api';
+import { graphql } from '../services/api';
 import { useAuth } from '../context/AuthContext';
 import './Dashboard.css';
 
@@ -11,9 +11,30 @@ export default function Dashboard() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        api.get('/dashboard').then((response) => {
-            setDados(response.data);
-        });
+        graphql(`
+            query Dashboard {
+                dashboard {
+                    pacientes
+                    prescricoes
+                    recentes {
+                        id
+                        createdAt
+                        paciente {
+                            nome
+                        }
+                        exercicios {
+                            dosagem
+                        }
+                    }
+                }
+            }
+        `)
+            .then((resposta) => {
+                setDados(resposta.dashboard);
+            })
+            .catch((erro) => {
+                console.error('Erro no GraphQL:', erro.message);
+            });
     }, []);
 
     const mediaExercicios = useMemo(() => {
@@ -180,7 +201,7 @@ export default function Dashboard() {
                         {dados.recentes.map((prescricao) => (
                             <div
                                 className="prescricao-recente"
-                                key={prescricao._id}
+                                key={prescricao.id}
                             >
                                 <div className="prescricao-recente-icone">
                                     📋

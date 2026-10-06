@@ -26,7 +26,7 @@ export const typeDefs = `
 
     type Prescricao {
         id: ID!
-        paciente: Paciente!
+        paciente: Paciente
         exercicios: [ItemPrescricao!]!
         queixa: String
         orientacoes: String
@@ -36,6 +36,7 @@ export const typeDefs = `
     type Dashboard {
         pacientes: Int!
         prescricoes: Int!
+        recentes: [Prescricao!]!
     }
 
     type Query {

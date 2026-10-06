@@ -76,10 +76,29 @@ export const resolvers = {
                 }).exec()
             ]);
 
+            const recentes = await Prescricao.find({
+                usuario: context.usuario.id
+            })
+                .populate(populate)
+                .sort({
+                    createdAt: -1
+                })
+                .limit(5)
+                .exec();
+
             return {
                 pacientes,
-                prescricoes
+                prescricoes,
+                recentes
             };
         }
+    },
+
+    Paciente: {
+        createdAt: (paciente) => paciente.createdAt?.toISOString()
+    },
+
+    Prescricao: {
+        createdAt: (prescricao) => prescricao.createdAt?.toISOString()
     }
 };
