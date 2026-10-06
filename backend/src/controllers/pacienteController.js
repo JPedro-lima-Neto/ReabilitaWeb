@@ -82,6 +82,11 @@ export async function remover(req, res) {
         });
     }
 
+    await Prescricao.deleteMany({
+        paciente: paciente._id,
+        usuario: req.usuario.id
+    });
+
     res.status(204).end();
 }
 export async function relatorio(req, res) {
